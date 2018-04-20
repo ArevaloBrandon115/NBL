@@ -2,75 +2,25 @@
 <html>
     <head> 
         <!--bootStrap StyleSheet-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='../style/NBLStyle.css' rel='stylesheet' type='text/css'>
+   
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
   
         <!-- my StyleSheet-->
-        <link rel="stylesheet" href="../style/NBLStyle.css">
+        <!-- <link rel="stylesheet" href="../style/NBLStyle.css"> -->
 
         <!--scripts for bootstrap-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            
-   </head>
-    <body>
-        <!--top nav bar-->
-        <div id="NBL_header">
-          <div class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #000000;">
-            <!--Icon with link to home screen-->
-            <a href="../html/NBLMainMenu.html">
-              <img id="Icon" src="../Images/pic_Four.png" alt="NBL Icon">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link (doesn't work)</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown (doesn't work)
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled (doesn't work)</a>
-                </li>
-              </ul>
-              <form>
-                <div class="row">
-                    <div class="col">
-                      <button type="submit" class="btn btn-outline-warning">
-                        <a href="../html/NBLMainMenu.html?">
-                          Log Out
-                        </a>
-                      </button>
-                    </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div>
-        </div>
-        <!--Google Map-->
-        <div id="gmap">
-            <h3>Csula Campus maps</h3>
-          <div id="map"></div>
-          <div>
-            <input id="address" type="textbox" value="Enter address here">
-            <input id="submit" type="button" value="Enter">
-          </div>
-          </div>
-          <script>
+        
+        <!-- <script>
             function initMap() {
                 var csula = {lat: 34.0666664 , lng: -118.167332664};
 
@@ -94,14 +44,26 @@
                     map: resultsMap,
                     position: results[0].geometry.location
                   });
+                  document.getElementById("demo").innerHTML=address+ "<br>" +results[0].geometry.location;
                 } else {
                   alert('Geocode was not successful for the following reason: ' + status);
                 }
               });
             }
-          </script>
+            
+          </script> 
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNfBiDOrPORbsDXWQzBEHImd24G16SWPs&callback=initMap"
-          async defer></script>
-       
+          async defer></script> -->
+          
+   </head>
+    <body>
+      
+        <div id="m">a</div>
+        <!-- <div id="map"></div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNfBiDOrPORbsDXWQzBEHImd24G16SWPs"></script>
+        <script src="../scripts/myscripts.js"></script> -->
     </body>
 </html>
