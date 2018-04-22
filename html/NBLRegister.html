@@ -1,115 +1,146 @@
 <!DOCTYPE html>
 <html>
-    <head> 
-        <!--bootStrap StyleSheet-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-        <!-- my StyleSheet-->
-        <link rel="stylesheet" href="../style/NBLStyle.css">
-        
-        <!--scripts for bootstrap-->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
+    <head>  
+            <!-- scripts for bootstrap -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+             <!-- Font Awesome -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- Bootstrap core CSS -->
+            <link href="../css/bootstrap.min.css" rel="stylesheet">
+            <!-- Material Design Bootstrap -->
+            <link href="../css/mdb.min.css" rel="stylesheet">
+            <!-- Your custom styles (optional) -->
+            <link href="../style/NBLStyle.css" rel="stylesheet">
     </head>
     <body>
-        <!--top nav bar-->
-        <div id="NBL_header">
-            <div class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #000000;">
-              <!--Icon with link to home screen-->
-              <a href="../html/NBLMainMenu.html">
-                <img id="Icon" src="../Images/pic_Four.png" alt="NBL Icon">
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!--top nav bar-->
+    <div id="NBL_header">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #000000;">
+
+            <a href="../html/NBLMainMenu.html">
+                <img class="animated fadeInDown" id="Icon" src="../Images/pic_Four.png" alt="NBL Icon">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link (doesn't work)</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown (doesn't work)
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled (doesn't work)</a>
-                  </li>
                 </ul>
                 <form>
-                  <div class="row">
-                    <div class="col">
-                        <input type="UserName" class="form-control" placeholder="Username">
+                    <div class="row">
+                        <div class="col">
+                            <input type="UserName" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="col">
+                            <input type="Password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="col">
+                            <a  class = "btn btn-outline-warning custom"href="../html/NBLMap.html">Login</a>
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="Password" class="form-control" placeholder="Password">
-                    </div>
-                    <div class="col">
-                      <a  class = "btn btn-outline-warning"href="../html/NBLMap.html">Login</a>
-                      <a href="../html/NBLMap.html" class = "btn btn-outline-warning">Guest Mode</a> </div>
-                  </div>
                 </form>
-              </div>
             </div>
         </div>
-        <div id="NBL_content">
-            <!--Register Information-->
-            <form id="reg">
-                <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">Email</label>
-                            <input type="text" class="form-control" id="inputEmail" placeholder="example@gmail.com">
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="inputState">First Name</label>
-                            <input type="text" class="form-control" id="inputFirst">
-                            </select>
-                        </div>
-                        <div class="form-group col-md-3">
-                            <label for="inputLast">Last Name</label>
-                            <input type="text" class="form-control" id="inputLast">
-                        </div>
+    </div>
+        
+    <!--Register Information-->
+    <form class="needs-validation regForm" novalidate>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationCustom01">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
+                <div class="valid-feedback">
+                  Looks good!
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputUserName4">UserName</label>
-                        <input type="username" class="form-control" id="inputUserName4" placeholder="UserName">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                    </div>
+                <label for="validationCustom02">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="" required>
+                <div class="valid-feedback">
+                  Looks good!
                 </div>
-                <div class="form-group">
-                    <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationCustomemail">Email</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  </div>
+                  <input type="text" class="form-control" id="validationCustomemail" placeholder="email" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please enter your email.
+                  </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="Los Angeles">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <input type="text" class="form-control" id="inputState" placeholder="California">
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip" placeholder="1234 Main St">
-                    </div>
+                <label for="validationCustomUsername">Username</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">!</span>
+                  </div>
+                  <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please choose a username.
+                  </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
-            </form>
-        </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationCustom03">City</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                <div class="invalid-feedback">
+                  Please provide a valid city.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom04">State</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Zip</label>
+                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Register</button>
+          </form>
+          
+          <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
+            
     </body>
 </html>

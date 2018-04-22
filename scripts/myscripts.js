@@ -1,44 +1,176 @@
+function initMap() {
+  var directionsDisplay = new google.maps.DirectionsRenderer;
+  var directionsService = new google.maps.DirectionsService;
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    // starts at csula
+    center: {lat: 34.0666664 , lng: -118.167332664}
+  });
 
-  $(function () {
+  
+  directionsDisplay.setMap(map);
+  directionsDisplay.setPanel(document.getElementById('right-panel'));
 
-    var map, infoWindow;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 34.0668, lng: 118.1681},
-        zoom: 16
-      });
-      infoWindow = new google.maps.InfoWindow;
+  var onChangeHandler = function() {
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+  };
+  document.getElementById('start').addEventListener('change', onChangeHandler);
+  document.getElementById('end').addEventListener('change', onChangeHandler);
+  directionsDisplay.addListener('directions_changed', function() {
+computeTotalDistance(directionsDisplay.getDirections());
+});
 
-      // Try HTML5 geolocation.
-      if (navigator.geolocation) { 
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
+}
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+   
+    var start = document.getElementById('start').value;
+    var end = document.getElementById('end').value;
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Location found.');
-          infoWindow.open(map);
-          map.setCenter(pos);
-        }, function() {
-          handleLocationError(true, infoWindow, map.getCenter());
-        });
-      } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-      }
+    // if(start.includes("king hall")){
+    //     start={lat: 34.067512,lng: -118.165493}
+    // }if(end.includes("king hall")){
+    //     end={lat: 34.067512,lng: -118.165493}
+    // }
+    directionsService.route({
+    origin: start,
+    destination: end,
+    travelMode: 'WALKING'
+    }, function(response, status) {
+    if (status === 'OK') {
+        directionsDisplay.setDirections(response);
+    } else {
+        window.alert('Directions request failed due to ' + status);
     }
-
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(browserHasGeolocation ?
-                            'Error: The Geolocation service failed.' :
-                            'Error: Your browser doesn\'t support geolocation.');
-      infoWindow.open(map);
-    }
-    google.maps.event.addDomListener(window, 'load', initMap);
     });
+} 
+function computeTotalDistance(result) {
+var total = 0;
+var myroute = result.routes[0];
+for (var i = 0; i < myroute.legs.length; i++) {
+  total += myroute.legs[i].distance.value;
+}
+var dis = (total/1000)*(0.621371/1);
+//round dis
+dis = round(dis,1)
+document.getElementById('total').innerHTML = dis + ' mi';
+
+var spe =1.45;//*(1/60)*(1/60);//dis *(1/60)*(1/60);
+document.getElementById('speed').innerHTML = spe + ' speed';
+
+var tim =(total/spe)*(1/60);
+document.getElementById('time').innerHTML = tim + ' time';
+
+//round numbers
+function round(number, precision) {
+var shift = function (number, precision, reverseShift) {
+    if (reverseShift) {
+    precision = -precision;
+    }  
+    var numArray = ("" + number).split("e");
+    return +(numArray[0] + "e" + (numArray[1] ? (+numArray[1] + precision) : precision));
+};
+return shift(Math.round(shift(number, precision, false)), precision, true);
+}
+}
+//////
+// $(function () {
+//     var directionsDisplay = new google.maps.DirectionsRenderer;
+//     var directionsService = new google.maps.DirectionsService;
+//     var map = new google.maps.Map(document.getElementById('map'), {
+//       zoom: 7,
+//       center: {lat: 34.0668, lng: 118.1681}
+//     });
+//     directionsDisplay.setMap(map);
+//     directionsDisplay.setPanel(document.getElementById('right-panel'));
+
+//     var control = document.getElementById('floating-panel');
+//     control.style.display = 'block';
+//     map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+
+//     var onChangeHandler = function() {
+//       calculateAndDisplayRoute(directionsService, directionsDisplay);
+//     };
+//     document.getElementById('start').addEventListener('change', onChangeHandler);
+//     document.getElementById('end').addEventListener('change', onChangeHandler);
+//     directionsDisplay.addListener('directions_changed', function() {
+// computeTotalDistance(directionsDisplay.getDirections());
+// });
+    
+   
+//     function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+//         var start = document.getElementById('start').value;
+//         var end = document.getElementById('end').value;
+//         directionsService.route({
+//           origin: start,
+//           destination: end,
+//           travelMode: 'WALKING'
+//         }, function(response, status) {
+//           if (status === 'OK') {
+//             directionsDisplay.setDirections(response);
+//           } else {
+//             window.alert('Directions request failed due to ' + status);
+//           }
+//         });
+//       }
+//       function computeTotalDistance(result) {
+//       var total = 0;
+//       var myroute = result.routes[0];
+//       for (var i = 0; i < myroute.legs.length; i++) {
+//         total += myroute.legs[i].distance.value;
+//       }
+//       var dis = (total/1000)*(0.621371/1);
+//       document.getElementById('total').innerHTML = dis + ' mi';
+      
+//       var spe =1.45;//*(1/60)*(1/60);//dis *(1/60)*(1/60);
+//       document.getElementById('speed').innerHTML = spe + ' speed';
+    
+//       var tim =(total/spe)/60;
+//       document.getElementById('time').innerHTML = tim + ' time';
+    
+//     }
+//     google.maps.event.addDomListener(window, 'load', initMap);
+// });
+/////////////
+//   $(function () {
+
+//     var map, infoWindow;
+//     function initMap() {
+//       map = new google.maps.Map(document.getElementById('map'), {
+//         center: {lat: 34.0668, lng: 118.1681},
+//         zoom: 16
+//       });
+//       infoWindow = new google.maps.InfoWindow;
+
+//       // Try HTML5 geolocation.
+//       if (navigator.geolocation) { 
+//         navigator.geolocation.getCurrentPosition(function(position) {
+//           var pos = {
+//             lat: position.coords.latitude,
+//             lng: position.coords.longitude
+//           };
+
+//           infoWindow.setPosition(pos);
+//           infoWindow.setContent('Location found.');
+//           infoWindow.open(map);
+//           map.setCenter(pos);
+//         }, function() {
+//           handleLocationError(true, infoWindow, map.getCenter());
+//         });
+//       } else {
+//         // Browser doesn't support Geolocation
+//         handleLocationError(false, infoWindow, map.getCenter());
+//       }
+//     }
+
+//     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+//       infoWindow.setPosition(pos);
+//       infoWindow.setContent(browserHasGeolocation ?
+//                             'Error: The Geolocation service failed.' :
+//                             'Error: Your browser doesn\'t support geolocation.');
+//       infoWindow.open(map);
+//     }
+//     google.maps.event.addDomListener(window, 'load', initMap);
+//     });
  ////////////////
  // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service

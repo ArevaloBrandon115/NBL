@@ -1,121 +1,45 @@
-body {
-    background-color:white;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    text-decoration: none;
-    color: #FFFF00
-}
-
-a:active {
-    text-decoration: none;
-}
-
-.form-group{
-    color: white;
-}
-#test{
-    color: white;
-}
-
-#map{
-    margin-top: 95px;
-    position: absolute;
-    height: 500px;
-    width: 500px;
-    right:60%;
-    border: 3px solid #FFFF00
-}
-#demo{
-    
-    margin-top: 95px;
-}
-#c{
-    margin-top: 95px;
-    background-color: aqua;
-    width: 100%;
-}
-
-#reg{
-    padding: 10%;
+body{
+    background-color: #FFCE00;
 }
 
 #Icon{
-    width: 60px;
-}
-#m{
-    width: 50%;
-    height: 100%;
-    background-color: blue;
+    width: 50px;
 }
 
-/* #gmap{
-    margin-top: 95px;
-} 
-#floating-panel {
-    position: absolute;
-    top: 10px;
-    left: 25%;
-    z-index: 5;
-    background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
-    text-align: center;
-    font-family: 'Roboto','sans-serif';
-    line-height: 30px;
-    padding-left: 10px;
-  }
-  #right-panel {
-    font-family: 'Roboto','sans-serif';
-    line-height: 30px;
-    padding-left: 10px;
-  }
+.custom{
+    height: 40px;
+    color: #FFCE00;
+}
 
-  #right-panel select, #right-panel input {
-    font-size: 15px;
-  }
+#map{
+    height: 500px;
+    width: auto;
+}
+#gMap{
+    margin-top: 10%;
+}
 
-  #right-panel select {
-    width: 100%;
-  }
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 30px;
+}
 
-  #right-panel i {
-    font-size: 12px;
-  }
-  #right-panel {
-    height: 100%;
-    float: right;
-    width: 390px;
-    overflow: auto;
-  }
-  #map {
-    margin-right: 300px;
-  }
-  #floating-panel {
-    background: #fff;
-    padding: 5px;
-    font-size: 14px;
-    font-family: Arial;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-    display: none;
-  }
-  @media print {
-    #map {
-      height: 500px;
-      margin: 0;
-    }
-    #right-panel {
-      float: none;
-      width: auto;
-    }
-  } */
+/* left userinput box */
+.column.userInput{
+    width: 25%;
+    background-color: #FFCE00;
+}
+
+/* Middle column */
+.column.googleMap {
+    width: 75%;
+    background-color: rgb(0, 0, 0);
+}
+
+.regForm{
+    margin-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}

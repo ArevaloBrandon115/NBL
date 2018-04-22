@@ -1,69 +1,103 @@
 <!DOCTYPE html>
 <html>
     <head> 
-        <!--bootStrap StyleSheet-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <link href='../style/NBLStyle.css' rel='stylesheet' type='text/css'>
-   
-
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-  
-        <!-- my StyleSheet-->
-        <!-- <link rel="stylesheet" href="../style/NBLStyle.css"> -->
-
-        <!--scripts for bootstrap-->
+        <!-- scripts for bootstrap -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
-        <!-- <script>
-            function initMap() {
-                var csula = {lat: 34.0666664 , lng: -118.167332664};
-
-              var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: csula
-              });
-              var geocoder = new google.maps.Geocoder();
-      
-              document.getElementById('submit').addEventListener('click', function() {
-                geocodeAddress(geocoder, map);
-              });
-            }
-      
-            function geocodeAddress(geocoder, resultsMap) {
-              var address = document.getElementById('address').value;
-              geocoder.geocode({'address': address}, function(results, status) {
-                if (status === 'OK') {
-                  resultsMap.setCenter(results[0].geometry.location);
-                  var marker = new google.maps.Marker({
-                    map: resultsMap,
-                    position: results[0].geometry.location
-                  });
-                  document.getElementById("demo").innerHTML=address+ "<br>" +results[0].geometry.location;
-                } else {
-                  alert('Geocode was not successful for the following reason: ' + status);
-                }
-              });
-            }
-            
-          </script> 
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNfBiDOrPORbsDXWQzBEHImd24G16SWPs&callback=initMap"
-          async defer></script> -->
-          
+         <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="../css/mdb.min.css" rel="stylesheet">
+        <!-- Your custom styles (optional) -->
+        <link href="../style/NBLStyle.css" rel="stylesheet"> 
    </head>
     <body>
-      
-        <div id="m">a</div>
-        <!-- <div id="map"></div>
+        <!--top nav bar-->
+        <div id="NBL_header">
+            <div class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #000000;">
+            <!--Icon with link to home screen-->
+            <a href="../html/NBLMainMenu.html">
+                <img class="animated fadeInDown" id="Icon" src="../Images/pic_Four.png" alt="NBL Icon">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <form>
+                <div class="row">
+                    <div class="col">
+                    <a  class = "btn btn-outline-warning custom"href="../html/NBLMainMenu.html">Log Out</a>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
 
+    <div id="gMap">
+     
+        <div class="row">
+            <div class = "column userInput">
+                <p>Total Distance: <span id="total"></span></p>
+    
+                <p>Total speed: <span id="speed"></span></p>
+            
+                <p>Total time: <span id="time"></span></p>
+                <form action="http://127.0.0.1:3000" method="post">
+                    <strong>Start:</strong>
+                    <input id="start" type="text" class="form-control" id="validationTooltip02" placeholder="Point A" value="csula" name="pointA" required>
+                    
+                    <!-- <select id="start"  class="custom-select cs1">
+                    <option value="34.068237, -118.169048">Cal State University, Los Angeles</option>
+                    <option value="34.069387, -118.167078">Luckman Theatre</option>
+                    <option value="joplin, mo">Joplin, MO</option>
+                    <option value="oklahoma city, ok">Oklahoma City</option>
+                    <option value="amarillo, tx">Amarillo</option>
+                    <option value="gallup, nm">Gallup, NM</option>
+                    <option value="flagstaff, az">Flagstaff, AZ</option>
+                    <option value="winona, az">Winona</option>
+                    <option value="kingman, az">Kingman</option>
+                    <option value="barstow, ca">Barstow</option>
+                    <option value="san bernardino, ca">San Bernardino</option>
+                    <option value="3150 glenhurst ave, los angeles, ca 90039">house1</option>
+                    </select> -->
+                    <br>
+                    <strong>End:</strong> 
+                    <!-- <input id="end" type="text" class="form-control" id="validationTooltip02" placeholder="Point B" value="" name="pointB" required> -->
+                            
+                    <select id="end"  class="custom-select cs2">
+                    <option value="34.071725, -118.168918">Anna Bing Arnold Children's Center</option>
+                    <option value="34.069462, -118.170478">TV, Film, Media (TVFM)</option>
+                    <option value="34.069377, -118.167077">Luckman Theatre</option>
+                    <option value="34.069207, -118.168105">Intimate Theatre</option>
+                    <option value="34.065316, -118.170293">Greenlee Plaza</option>
+                    <option value="34.065223, -118.170306">Parking Structure B</option>
+                    <option value="34.065849, -118.170474">Physical Sciences (PS)</option>
+                    <option value="winona, az">Winona</option>
+                    <option value="kingman, az">Kingman</option>
+                    <option value="barstow, ca">Barstow</option>
+                    <option value="san bernardino, ca">San Bernardino</option>
+                    <option value="5151 Elizabeth St., Cudahy, ca 90201">jose</option>
+                    </select>
+                </form>
+            </div> 
+        <div class="column googleMap">
+          
+            <div id="map"></div>
+        </div>
+        <div id="right-panel"></div> 
+        </div>
+    </div>
+        <script src="../scripts/myscripts.js"></script>
+      
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNfBiDOrPORbsDXWQzBEHImd24G16SWPs"></script>
-        <script src="../scripts/myscripts.js"></script> -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNfBiDOrPORbsDXWQzBEHImd24G16SWPs&libraries=places&callback=initMap"></script>
+       
     </body>
 </html>
