@@ -14,7 +14,7 @@
         <!-- Your custom styles (optional) -->
         <link href="../style/NBLStyle.css" rel="stylesheet"> 
    </head>
-    <body>
+    <body onload="startTime()">
         <!--top nav bar-->
         <div id="NBL_header">
             <div class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #000000;">
@@ -48,42 +48,127 @@
                 <p>Total speed: <span id="speed"></span></p>
             
                 <p>Total time: <span id="time"></span></p>
+
+                <p>Total added time: <span id="addedTime"></span></p>
+                
+                <p>Total real time: <span id="txt"></span></p>
+                
                 <form action="http://127.0.0.1:3000" method="post">
                     <strong>Start:</strong>
-                    <input id="start" type="text" class="form-control" id="validationTooltip02" placeholder="Point A" value="csula" name="pointA" required>
+                    <!-- <input id="start" type="text" class="form-control" id="validationTooltip02" placeholder="Point A" value="csula" name="pointA" required> -->
                     
-                    <!-- <select id="start"  class="custom-select cs1">
-                    <option value="34.068237, -118.169048">Cal State University, Los Angeles</option>
-                    <option value="34.069387, -118.167078">Luckman Theatre</option>
-                    <option value="joplin, mo">Joplin, MO</option>
-                    <option value="oklahoma city, ok">Oklahoma City</option>
-                    <option value="amarillo, tx">Amarillo</option>
-                    <option value="gallup, nm">Gallup, NM</option>
-                    <option value="flagstaff, az">Flagstaff, AZ</option>
-                    <option value="winona, az">Winona</option>
-                    <option value="kingman, az">Kingman</option>
-                    <option value="barstow, ca">Barstow</option>
-                    <option value="san bernardino, ca">San Bernardino</option>
-                    <option value="3150 glenhurst ave, los angeles, ca 90039">house1</option>
-                    </select> -->
-                    <br>
-                    <strong>End:</strong> 
-                    <!-- <input id="end" type="text" class="form-control" id="validationTooltip02" placeholder="Point B" value="" name="pointB" required> -->
-                            
-                    <select id="end"  class="custom-select cs2">
-                    <option value="34.071725, -118.168918">Anna Bing Arnold Children's Center</option>
-                    <option value="34.069462, -118.170478">TV, Film, Media (TVFM)</option>
-                    <option value="34.069377, -118.167077">Luckman Theatre</option>
-                    <option value="34.069207, -118.168105">Intimate Theatre</option>
-                    <option value="34.065316, -118.170293">Greenlee Plaza</option>
-                    <option value="34.065223, -118.170306">Parking Structure B</option>
-                    <option value="34.065849, -118.170474">Physical Sciences (PS)</option>
-                    <option value="winona, az">Winona</option>
-                    <option value="kingman, az">Kingman</option>
-                    <option value="barstow, ca">Barstow</option>
-                    <option value="san bernardino, ca">San Bernardino</option>
-                    <option value="5151 Elizabeth St., Cudahy, ca 90201">jose</option>
+                    <select id="start"  class="custom-select cs1">
+                    <option value="34.066563, -118.167908">Physical Education (PE)</option>
+                    <option value="34.066087, -118.168252">Career Center (CC)</option>
+                    <option value="34.066343, -118.167779">Athletics - Eagles Nest</option>
+                    <option value="34.065775, -118.168296">Student Health Center (HC)</option>
+                    <option value="34.066853, -118.168648">Financial Aid</option>
+                    <option value="34.066639, -118.168940">Administration (ADM)</option>
+                    <option value="34.065894, -118.167120">NASA Space Lab</option>
+                    <option value="34.067178, -118.167420">John F. Kennedy Memorial Library - Palmer Wing</option>
+                    <option value="34.066915, -118.169068">Student Affairs (SA)</option>
+                    <option value="34.066783, -118.169097">Admissions</option>
+                    <option value="34.065257, -118.168011">Annenberg Science Complex Wing B (ASCB)</option>
+                    <option value="34.065610, -118.169043">Biological Sciences (BS)</option>
+                    <option value="34.067698, -118.168601">Golden Eagle (GE)</option>
+                    <option value="34.067657, -118.167405">John F. Kennedy Memorial Library</option>
+                    <option value="34.067202, -118.166557">Fine Arts Gallery</option>
+                    <option value="34.064926, -118.168276">Annenberg Science Complex La Kretz (ASCL)</option>
+                    <option value="34.065469, -118.166423">Athletics - Reeder Field</option>
+                    <option value="34.066464, -118.166668">Engineering and Technology (ET)</option>
+                    <option value="34.067296, -118.166637">Fine Arts (FA)</option>
+                    <option value="34.068117, -118.169037">University Student Union (U-SU)</option>
+                    <option value="34.068190, -118.167210">Arena Theatre</option>
+                    <option value="34.068408, -118.168045">State Playhouse</option>
+                    <option value="34.065859, -118.170374">Physical Sciences (PS)</option>
+                    <option value="34.064222, -118.167212">Athletics - Jesse Owens Track and Field</option>
+                    <option value="34.062114, -118.173699">Alumni Center</option>
+                    <option value="34.068580, -118.168327">Luckman Gallery</option>
+                    <option value="34.065852, -118.165520">Hydrogen Station</option>
+                    <option value="34.068622, -118.167866">Music Hall</option>
+                    <option value="34.063634, -118.168805">Corporation Yard</option>
+                    <option value="34.068366, -118.167154">Music (MUS)</option>
+                    <option value="34.065186, -118.170311">Greenlee Plaza</option>
+                    <option value="34.064268, -118.169056">Simpson Tower (ST)</option>
+                    <option value="34.067514, -118.165506">King Hall (KH) and Lecture Halls</option>
+                    <option value="34.064008, -118.169215">Gerontology Center</option>
+                    <option value="34.064193, -118.166298">Athletics - Tennis/Basketball Courts</option>
+                    <option value="34.069215, -118.168097">Intimate Theatre</option>
+                    <option value="34.069300, -118.167103">Los Angeles County High School for the Arts (LACHSA)</option>
+                    <option value="34.069206, -118.168856">Luckman Theatre</option>
+                    <option value="34.063973, -118.169644">Salazar Hall (SH)</option>
+                    <option value="34.063627, -118.170736">Marc and Eva Stern Math and Science School</option>
+                    <option value="34.065077, -118.169337">Transit Center</option>
+                    <option value="34.069931, -118.165248">Housing Information</option>
+                    <option value="34.069472, -118.170479">TV, Film, Media (TVFM)</option>
+                    <option value="34.064868, -118.172830">Information - Welcome Center</option>
+                    <option value="34.064375, -118.172640">Parking, Transportation Service Center, Police/Public Safety (PUBS)</option>
+                    <option value="34.071736, -118.168926">Anna Bing Arnold Children's Center</option>
+                    <option value="34.062038, -118.173675">Hertzberg-Davis Forensic Science Center</option>
                     </select>
+                    <br> 
+                    <!-- <input id="end" type="text" class="form-control" id="validationTooltip02" placeholder="Point B" value="" name="pointB" required> -->
+                   
+                    <strong>End:</strong>
+                    <select id="end"  class="custom-select cs2">
+                        <option value="34.066563, -118.167908">Physical Education (PE)</option>
+                        <option value="34.066087, -118.168252">Career Center (CC)</option>
+                        <option value="34.066343, -118.167779">Athletics - Eagles Nest</option>
+                        <option value="34.065775, -118.168296">Student Health Center (HC)</option>
+                        <option value="34.066853, -118.168648">Financial Aid</option>
+                        <option value="34.066639, -118.168940">Administration (ADM)</option>
+                        <option value="34.065894, -118.167120">NASA Space Lab</option>
+                        <option value="34.067178, -118.167420">John F. Kennedy Memorial Library - Palmer Wing</option>
+                        <option value="34.066915, -118.169068">Student Affairs (SA)</option>
+                        <option value="34.066783, -118.169097">Admissions</option>
+                        <option value="34.065257, -118.168011">Annenberg Science Complex Wing B (ASCB)</option>
+                        <option value="34.065610, -118.169043">Biological Sciences (BS)</option>
+                        <option value="34.067698, -118.168601">Golden Eagle (GE)</option>
+                        <option value="34.067657, -118.167405">John F. Kennedy Memorial Library</option>
+                        <option value="34.067202, -118.166557">Fine Arts Gallery</option>
+                        <option value="34.064926, -118.168276">Annenberg Science Complex La Kretz (ASCL)</option>
+                        <option value="34.065469, -118.166423">Athletics - Reeder Field</option>
+                        <option value="34.066464, -118.166668">Engineering and Technology (ET)</option>
+                        <option value="34.067296, -118.166637">Fine Arts (FA)</option>
+                        <option value="34.068117, -118.169037">University Student Union (U-SU)</option>
+                        <option value="34.068190, -118.167210">Arena Theatre</option>
+                        <option value="34.068408, -118.168045">State Playhouse</option>
+                        <option value="34.065859, -118.170374">Physical Sciences (PS)</option>
+                        <option value="34.064222, -118.167212">Athletics - Jesse Owens Track and Field</option>
+                        <option value="34.062114, -118.173699">Alumni Center</option>
+                        <option value="34.068580, -118.168327">Luckman Gallery</option>
+                        <option value="34.065852, -118.165520">Hydrogen Station</option>
+                        <option value="34.068622, -118.167866">Music Hall</option>
+                        <option value="34.063634, -118.168805">Corporation Yard</option>
+                        <option value="34.068366, -118.167154">Music (MUS)</option>
+                        <option value="34.065186, -118.170311">Greenlee Plaza</option>
+                        <option value="34.064268, -118.169056">Simpson Tower (ST)</option>
+                        <option value="34.067514, -118.165506">King Hall (KH) and Lecture Halls</option>
+                        <option value="34.064008, -118.169215">Gerontology Center</option>
+                        <option value="34.064193, -118.166298">Athletics - Tennis/Basketball Courts</option>
+                        <option value="34.069215, -118.168097">Intimate Theatre</option>
+                        <option value="34.069300, -118.167103">Los Angeles County High School for the Arts (LACHSA)</option>
+                        <option value="34.069206, -118.168856">Luckman Theatre</option>
+                        <option value="34.063973, -118.169644">Salazar Hall (SH)</option>
+                        <option value="34.063627, -118.170736">Marc and Eva Stern Math and Science School</option>
+                        <option value="34.065077, -118.169337">Transit Center</option>
+                        <option value="34.069931, -118.165248">Housing Information</option>
+                        <option value="34.069472, -118.170479">TV, Film, Media (TVFM)</option>
+                        <option value="34.064868, -118.172830">Information - Welcome Center</option>
+                        <option value="34.064375, -118.172640">Parking, Transportation Service Center, Police/Public Safety (PUBS)</option>
+                        <option value="34.071736, -118.168926">Anna Bing Arnold Children's Center</option>
+                        <option value="34.062038, -118.173675">Hertzberg-Davis Forensic Science Center</option>
+                    </select>
+
+                    <strong>Room #:</strong>
+                    <input id="room" type="text" class="form-control" id="validationTooltip02" placeholder="1234" value="" name="room" required>
+                   
+                    <strong>desired time of arrival:</strong>
+                    <input id="arrival" type="text" class="form-control" id="validationTooltip02" placeholder="5:00 pm/am" value="" name="arrival" required>
+                   
+
+                   
+                    
                 </form>
             </div> 
         <div class="column googleMap">

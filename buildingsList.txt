@@ -1,0 +1,83 @@
+47
+Physical Education (PE)																		34.066563, -118.167908
+Career Center (CC)																		34.066087, -118.168252
+(323) 343-3237
+Athletics - Eagles Nest																		34.066343, -118.167779
+(323) 343-3080
+Student Health Center (HC)																	34.065775, -118.168296
+(323) 343-3301
+Financial Aid																			34.066853, -118.168648
+(323) 343.6260
+Administration (ADM)																		34.066639, -118.168940
+(323) 343-3000
+NASA Space Lab																			34.065894, -118.167120
+(323) 343-5445
+John F. Kennedy Memorial Library - Palmer Wing															34.067178, -118.167420
+(323) 343-3950
+Student Affairs (SA)																		34.066915, -118.169068
+323-343-3100
+Admissions																			34.066783, -118.169097
+(323) 343-3901
+Annenberg Science Complex Wing B (ASCB)																34.065257, -118.168011
+Biological Sciences (BS)																	34.065610, -118.169043
+(323) 343-2050
+Golden Eagle (GE) - Bookstore, Conference Center, Food Court, College of Professional and Global Education, Pat Brown Institute, University Club		34.067698, -118.168601
+(323) 343-2531
+John F. Kennedy Memorial Library																34.067657, -118.167405
+(323) 343-3950
+Fine Arts Gallery																		34.067202, -118.166557
+(323) 343-4040
+Annenberg Science Complex La Kretz (ASCL)															34.064926, -118.168276
+Athletics - Reeder Field																	34.065469, -118.166423
+(323) 343-3080
+Engineering and Technology (ET)																	34.066464, -118.166668
+(323) 343-4500
+Fine Arts (FA)																			34.067296, -118.166637
+(323)-343-4010
+University Student Union (U-SU)																	34.068117, -118.169037
+(323) 343-2450
+Arena Theatre																			34.068190, -118.167210
+(323) 343-4110
+State Playhouse																			34.068408, -118.168045
+(323) 343-4110
+Physical Sciences (PS)																		34.065859, -118.170374
+Athletics - Jesse Owens Track and Field																34.064222, -118.167212
+(323) 343-3080
+Alumni Center																			34.062114, -118.173699
+(323) 343-2586
+Luckman Gallery																			34.068580, -118.168327
+(323) 343-6604
+Hydrogen Station																		34.065852, -118.165520
+Music Hall																			34.068622, -118.167866
+(323) 343-4060
+Corporation Yard																		34.063634, -118.168805
+Music (MUS)																			34.068366, -118.167154
+(323) 343-4060
+Greenlee Plaza																			34.065186, -118.170311
+Simpson Tower (ST)																		34.064268, -118.169056
+King Hall (KH) and Lecture Halls																34.067514, -118.165506
+Gerontology Center																		34.064008, -118.169215
+(323) 343-4724
+Athletics - Tennis/Basketball Courts																34.064193, -118.166298
+(323) 343-3080
+Intimate Theatre																		34.069215, -118.168097
+(323) 343-6611
+Los Angeles County High School for the Arts (LACHSA)														34.069300, -118.167103
+(323) 343-2550
+Luckman Theatre																			34.069206, -118.168856
+(323) 343-6611
+Salazar Hall (SH)																		34.063973, -118.169644
+Marc and Eva Stern Math and Science School															34.063627, -118.170736
+(323) 987-2144
+Transit Center																			34.065077, -118.169337
+Housing Information																		34.069931, -118.165248
+(323) 343-4800
+TV, Film, Media (TVFM)																		34.069472, -118.170479
+(323) 343-5425
+Information - Welcome Center																	34.064868, -118.172830
+Parking, Transportation Service Center, Police/Public Safety (PUBS)												34.064375, -118.172640
+(323) 343-3700
+Anna Bing Arnold Children's Center																34.071736, -118.168926
+(323) 343-2470
+Hertzberg-Davis Forensic Science Center																34.062038, -118.173675
+(323) 343-4610

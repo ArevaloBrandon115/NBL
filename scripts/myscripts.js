@@ -1,8 +1,11 @@
+var a="";
 function initMap() {
-  var directionsDisplay = new google.maps.DirectionsRenderer;
+  var directionsDisplay = new google.maps.DirectionsRenderer({
+    draggable: true});
   var directionsService = new google.maps.DirectionsService;
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
+    draggable: true,
     // starts at csula
     center: {lat: 34.0666664 , lng: -118.167332664}
   });
@@ -16,6 +19,7 @@ function initMap() {
   };
   document.getElementById('start').addEventListener('change', onChangeHandler);
   document.getElementById('end').addEventListener('change', onChangeHandler);
+  document.getElementById('room').addEventListener('change', onChangeHandler);
   directionsDisplay.addListener('directions_changed', function() {
 computeTotalDistance(directionsDisplay.getDirections());
 });
@@ -34,6 +38,10 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     directionsService.route({
     origin: start,
     destination: end,
+    // BICYCLING
+    //WALKING
+    //TRANSIT
+    //DRIVING
     travelMode: 'WALKING'
     }, function(response, status) {
     if (status === 'OK') {
@@ -49,6 +57,8 @@ var myroute = result.routes[0];
 for (var i = 0; i < myroute.legs.length; i++) {
   total += myroute.legs[i].distance.value;
 }
+
+var r = document.getElementById('room').value;
 var dis = (total/1000)*(0.621371/1);
 //round dis
 dis = round(dis,1)
@@ -57,9 +67,23 @@ document.getElementById('total').innerHTML = dis + ' mi';
 var spe =1.45;//*(1/60)*(1/60);//dis *(1/60)*(1/60);
 document.getElementById('speed').innerHTML = spe + ' speed';
 
-var tim =(total/spe)*(1/60);
-document.getElementById('time').innerHTML = tim + ' time';
 
+var atString = r+"";
+var at = r.substring(0,1);
+//seconds for stair
+var sps = Number(at) * 0.10;
+document.getElementById('addedTime').innerHTML = sps + ' time added';
+
+var tim =(total/spe)*(1/60);
+tim = round(tim+sps,0)
+document.getElementById('time').innerHTML = tim + ' time';
+var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    a =  h + ":" + m + ":" + s+"   "+a;
 //round numbers
 function round(number, precision) {
 var shift = function (number, precision, reverseShift) {
@@ -71,6 +95,23 @@ var shift = function (number, precision, reverseShift) {
 };
 return shift(Math.round(shift(number, precision, false)), precision, true);
 }
+
+}
+//live event
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
 }
 //////
 // $(function () {
