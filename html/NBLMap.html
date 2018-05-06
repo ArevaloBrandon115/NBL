@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head> 
+            <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+          
+            <link rel="stylesheet" href="styles.min.css">
+            
+          
+            <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+            <link rel="shortcut icon" href="img/favicon.ico">
+          
         <!-- scripts for bootstrap -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-         <!-- Font Awesome -->
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Bootstrap core CSS -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -16,173 +30,326 @@
    </head>
     <body onload="startTime()">
         <!--top nav bar-->
-        <div id="NBL_header">
-            <div class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #000000;">
-            <!--Icon with link to home screen-->
+        
+         <!-- Navbar -->
+  <!-- <nav class="navbar fixed-top navbar-expand-lg bg-dark scrolling-navbar">
+        <div class="container"> -->
+    
+          <!-- Brand -->
+          <!-- <a class="navbar-brand" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
             <a href="../html/NBLMainMenu.html">
-                <img class="animated fadeInDown" id="Icon" src="../Images/pic_Four.png" alt="NBL Icon">
+              <img class="animated fadeInDown" id="Icon" src="../Images/pic_Four.png" alt="NBL Icon">
             </a>
+          </a> -->
+    
+          <!-- Collapse -->
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+    
+          <!-- Links -->
+          <!-- <div class="collapse bg-dark navbar-collapse" id="navbarSupportedContent"> -->
+  
+            <!-- Left -->
+            <!-- <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="../html/NBLMap.html" style="color: white; margin-left: 20px" >
+                    Welcome, User!
+                </a>
+              </li>
+            
+            </ul> -->
+    
+            <!-- Right -->
+            <!-- <ul class="navbar-nav nav-flex-icons">
+  
+            <li class ="nav-item">
+                <a href="../html/NBLMainMenu.html" class="btn peach-gradient btn-rounded" id="radButton" >Log Out</a>
+            </li>
+            </ul>
+    
+          </div>
+    
+        </div>
+      </nav> -->
+      <!-- Navbar -->
+      <header>
+    
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+         <a class="navbar-brand" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">
+            <a href="../html/NBLMainMenu.html">
+              <img class="animated fadeInDown" id="Icon" src="../Images/pic_Four.png" alt="NBL Icon">
+            </a>
+          </a> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../html/NBLMap.html" style="color: white;margin-top:15px; margin-left: 10px;" >
+                                  Welcome, User!
+                            </a>
+                        </li>                 
+                    <ul class="navbar-nav nav-flex-icons"></ul>
+
+                    <li class ="nav-item" style="margin-left:900px">
+                            <a class = "nav-link" href="../html/NBLMainMenu.html"><button type="button" class="btn btn-outline-warning">Logout</button></a>
+                    </li>
                 </ul>
-                <form>
-                <div class="row">
-                    <div class="col">
-                    <a  class = "btn btn-outline-warning custom"href="../html/NBLMainMenu.html">Log Out</a>
+            </div>
+        </nav>
+
+        <div class="view intro-2">
+                <img class="d-block w-100" src="../Images/Cal_State_21_980_735_80_s_c1_t_c_0_0_1.jpg" alt="Second slide">
+            <div class="full-bg-img">
+                <div class="mask rgba-purple-light flex-center">
+                    <div class="container  wow fadeInUp">
+                            <div class="col-md-5 mb-4">
+
+                                    <div class="card mx-xl-5" id="card">
+                                        <div class="card-body">
+                            
+                                            <!--Header-->
+                                
+                                            <form action="post">
+                                                <!-- <input id="start" type="text" class="form-control" id="validationTooltip02" placeholder="Point A" value="csula" name="pointA" required> -->
+                                                <i class="fas fa-map-marker-alt"><strong>Start:</strong></i>
+                                                <select id="start" class="form-control form-control-sm">
+                                                <!-- <option value="">current location</option> -->
+                                                <option value="34.066563, -118.167908">Physical Education (PE)</option>
+                                                <option value="34.066087, -118.168252">Career Center (CC)</option>
+                                                <option value="34.066343, -118.167779">Athletics - Eagles Nest</option>
+                                                <option value="34.065775, -118.168296">Student Health Center (HC)</option>
+                                                <option value="34.066853, -118.168648">Financial Aid</option>
+                                                <option value="34.066639, -118.168940">Administration (ADM)</option>
+                                                <option value="34.065894, -118.167120">NASA Space Lab</option>
+                                                <option value="34.067178, -118.167420">John F. Kennedy Memorial Library - Palmer Wing</option>
+                                                <option value="34.066915, -118.169068">Student Affairs (SA)</option>
+                                                <option value="34.066783, -118.169097">Admissions</option>
+                                                <option value="34.065257, -118.168011">Annenberg Science Complex Wing B (ASCB)</option>
+                                                <option value="34.065610, -118.169043">Biological Sciences (BS)</option>
+                                                <option value="34.067698, -118.168601">Golden Eagle (GE)</option>
+                                                <option value="34.067657, -118.167405">John F. Kennedy Memorial Library</option>
+                                                <option value="34.067202, -118.166557">Fine Arts Gallery</option>
+                                                <option value="34.064926, -118.168276">Annenberg Science Complex La Kretz (ASCL)</option>
+                                                <option value="34.065469, -118.166423">Athletics - Reeder Field</option>
+                                                <option value="34.066464, -118.166668">Engineering and Technology (ET)</option>
+                                                <option value="34.067296, -118.166637">Fine Arts (FA)</option>
+                                                <option value="34.068117, -118.169037">University Student Union (U-SU)</option>
+                                                <option value="34.068190, -118.167210">Arena Theatre</option>
+                                                <option value="34.068408, -118.168045">State Playhouse</option>
+                                                <option value="34.065859, -118.170374">Physical Sciences (PS)</option>
+                                                <option value="34.064222, -118.167212">Athletics - Jesse Owens Track and Field</option>
+                                                <option value="34.062114, -118.173699">Alumni Center</option>
+                                                <option value="34.068580, -118.168327">Luckman Gallery</option>
+                                                <option value="34.065852, -118.165520">Hydrogen Station</option>
+                                                <option value="34.068622, -118.167866">Music Hall</option>
+                                                <option value="34.063634, -118.168805">Corporation Yard</option>
+                                                <option value="34.068366, -118.167154">Music (MUS)</option>
+                                                <option value="34.065186, -118.170311">Greenlee Plaza</option>
+                                                <option value="34.064268, -118.169056">Simpson Tower (ST)</option>
+                                                <option value="34.067514, -118.165506">King Hall (KH) and Lecture Halls</option>
+                                                <option value="34.064008, -118.169215">Gerontology Center</option>
+                                                <option value="34.064193, -118.166298">Athletics - Tennis/Basketball Courts</option>
+                                                <option value="34.069215, -118.168097">Intimate Theatre</option>
+                                                <option value="34.069300, -118.167103">Los Angeles County High School for the Arts (LACHSA)</option>
+                                                <option value="34.069206, -118.168856">Luckman Theatre</option>
+                                                <option value="34.063973, -118.169644">Salazar Hall (SH)</option>
+                                                <option value="34.063627, -118.170736">Marc and Eva Stern Math and Science School</option>
+                                                <option value="34.065077, -118.169337">Transit Center</option>
+                                                <option value="34.069931, -118.165248">Housing Information</option>
+                                                <option value="34.069472, -118.170479">TV, Film, Media (TVFM)</option>
+                                                <option value="34.064868, -118.172830">Information - Welcome Center</option>
+                                                <option value="34.064375, -118.172640">Parking, Transportation Service Center, Police/Public Safety (PUBS)</option>
+                                                <option value="34.071736, -118.168926">Anna Bing Arnold Children's Center</option>
+                                                <option value="34.062038, -118.173675">Hertzberg-Davis Forensic Science Center</option>
+                                                </select>
+                                                <br> 
+
+                                                <strong>Starting room</strong> <i class="fas fa-hashtag">: </i>
+                                                <input id="startroom" type="text" class="form-control" id="validationTooltip02" placeholder="ex: 3014" value="" name="room" required>
+                                                <br>
+                                                <i class="fas fa-map-marker-alt"><strong>End:</strong></i>
+                                                <select id="end"  class="form-control form-control-sm">
+                                                    <option value="34.066563, -118.167908">Physical Education (PE)</option>
+                                                    <option value="34.066087, -118.168252">Career Center (CC)</option>
+                                                    <option value="34.066343, -118.167779">Athletics - Eagles Nest</option>
+                                                    <option value="34.065775, -118.168296">Student Health Center (HC)</option>
+                                                    <option value="34.066853, -118.168648">Financial Aid</option>
+                                                    <option value="34.066639, -118.168940">Administration (ADM)</option>
+                                                    <option value="34.065894, -118.167120">NASA Space Lab</option>
+                                                    <option value="34.067178, -118.167420">John F. Kennedy Memorial Library - Palmer Wing</option>
+                                                    <option value="34.066915, -118.169068">Student Affairs (SA)</option>
+                                                    <option value="34.066783, -118.169097">Admissions</option>
+                                                    <option value="34.065257, -118.168011">Annenberg Science Complex Wing B (ASCB)</option>
+                                                    <option value="34.065610, -118.169043">Biological Sciences (BS)</option>
+                                                    <option value="34.067698, -118.168601">Golden Eagle (GE)</option>
+                                                    <option value="34.067657, -118.167405">John F. Kennedy Memorial Library</option>
+                                                    <option value="34.067202, -118.166557">Fine Arts Gallery</option>
+                                                    <option value="34.064926, -118.168276">Annenberg Science Complex La Kretz (ASCL)</option>
+                                                    <option value="34.065469, -118.166423">Athletics - Reeder Field</option>
+                                                    <option value="34.066464, -118.166668">Engineering and Technology (ET)</option>
+                                                    <option value="34.067296, -118.166637">Fine Arts (FA)</option>
+                                                    <option value="34.068117, -118.169037">University Student Union (U-SU)</option>
+                                                    <option value="34.068190, -118.167210">Arena Theatre</option>
+                                                    <option value="34.068408, -118.168045">State Playhouse</option>
+                                                    <option value="34.065859, -118.170374">Physical Sciences (PS)</option>
+                                                    <option value="34.064222, -118.167212">Athletics - Jesse Owens Track and Field</option>
+                                                    <option value="34.062114, -118.173699">Alumni Center</option>
+                                                    <option value="34.068580, -118.168327">Luckman Gallery</option>
+                                                    <option value="34.065852, -118.165520">Hydrogen Station</option>
+                                                    <option value="34.068622, -118.167866">Music Hall</option>
+                                                    <option value="34.063634, -118.168805">Corporation Yard</option>
+                                                    <option value="34.068366, -118.167154">Music (MUS)</option>
+                                                    <option value="34.065186, -118.170311">Greenlee Plaza</option>
+                                                    <option value="34.064268, -118.169056">Simpson Tower (ST)</option>
+                                                    <option value="34.067514, -118.165506">King Hall (KH) and Lecture Halls</option>
+                                                    <option value="34.064008, -118.169215">Gerontology Center</option>
+                                                    <option value="34.064193, -118.166298">Athletics - Tennis/Basketball Courts</option>
+                                                    <option value="34.069215, -118.168097">Intimate Theatre</option>
+                                                    <option value="34.069300, -118.167103">Los Angeles County High School for the Arts (LACHSA)</option>
+                                                    <option value="34.069206, -118.168856">Luckman Theatre</option>
+                                                    <option value="34.063973, -118.169644">Salazar Hall (SH)</option>
+                                                    <option value="34.063627, -118.170736">Marc and Eva Stern Math and Science School</option>
+                                                    <option value="34.065077, -118.169337">Transit Center</option>
+                                                    <option value="34.069931, -118.165248">Housing Information</option>
+                                                    <option value="34.069472, -118.170479">TV, Film, Media (TVFM)</option>
+                                                    <option value="34.064868, -118.172830">Information - Welcome Center</option>
+                                                    <option value="34.064375, -118.172640">Parking, Transportation Service Center, Police/Public Safety (PUBS)</option>
+                                                    <option value="34.071736, -118.168926">Anna Bing Arnold Children's Center</option>
+                                                    <option value="34.062038, -118.173675">Hertzberg-Davis Forensic Science Center</option>
+                                                </select>
+                                                <br>
+                                                <strong>Destination room</strong>
+                                                <i class="fas fa-hashtag">:</i><input id="endroom" type="text" class="form-control" id="validationTooltip02" placeholder="ex: 3014" value="" name="room" required>
+                                               <br>
+                                               <i class="fas fa-clock"></i>
+                                               <strong>Time of Arrival:</strong>
+                                                <input id="arrival" type="text" class="form-control" id="validationTooltip02" placeholder="ex: 5:00 AM" value="" name="arrival" required>
+                                                <br>
+                                                <div class="options font-weight-light">
+                                                <p><strong>shall be on time with in  </strong><span id="time"></span></p>
+                                                <script>
+                                                        function myFunction() {
+                                                    // Get the checkbox
+                                                     var checkBox = document.getElementById("inlineFormCheckMD");
+                                                     // Get the output text
+                                                    var rightpanel = document.getElementById("right-panel");
+                            
+                                                    // If the checkbox is checked, display the output text
+                                                    if (checkBox.checked === false){
+                                                     rightpanel.style.display = "none";
+                                                    } else if(checkBox.checked === true){
+                                                     rightpanel.style.display = "block";
+                                                    }
+                                                         }
+                                                        document.getElementById("al").innerHTML = "On Time! No need to rush.";
+                                                        document.getElementById("al").className = "alert alert-danger algreen";
+                                                    </script>
+                                                <div class="form-check mb-2 mr-sm-2">
+                                                        <input class="form-check-input" type="checkbox" id="inlineFormCheckMD" onclick="myFunction()" value="1">
+                                                        <label class="form-check-label" for="inlineFormCheckMD">
+                                                           Check box for directions!
+                                                        </label>
+                                                </div>          
+                            
+                                                <div class="alert alert-success algreen" id="al">
+                                                    <strong>On Time!</strong> No need to rush.
+                                                </div>
+                                            </div>
+                                
+                                                <div class="text-center mt-4">
+                                                        <button class="btn btn-light-blue" type="reset">Reset</button>
+                                                    </div>          
+                                                            <br>
+                                            <!-- Material input email -->
+                                            <!-- <div class="md-form">
+                                                    <i class="fa fa-envelope prefix"></i>
+                                                    <input type="email" id="inputValidationEx" class="form-control validate">
+                                                    <label for="inputValidationEx" data-error="wrong" data-success="right">Type your email</label>
+                                                </div> -->
+                            
+                                            <!-- Material input password -->
+                                            <!-- <div class="md-form font-weight-light">
+                                                    <i class="fas fa-map-marker-alt"></i>
+                            
+                                                <input type="password" id="materialFormPasswordEx" class="form-control">
+                                                <label for="materialFormPasswordEx">Your password</label>
+                                            </div> -->
+                            
+                                        </form>
+                                    </div>
+                                    </div>
+                                </div>
+                                
+            <div class="card" id="card1">
+                    <div class="card-body1">
+                                           
+                            <!-- <div class="column googleMap">  -->
+                                    <div id="map"></div>
+                                <!-- </div> -->
+                        
+                    </div>
+            </div>
+            <div>
+                <div id="right-panel" style="display:none;background:white"></div>
+            </div>
+                    </div>
                 </div>
-                </form>
-            </div>
             </div>
         </div>
-
-    <div id="gMap">
-     
-        <div class="row">
-            <div class = "column userInput">
-                <p>Total Distance: <span id="total"></span></p>
     
-                <p>Total speed: <span id="speed"></span></p>
+    </header>
+
+<!-- Grid column -->
+
+
+
+            <!--Footer-->
+            <!-- <div class="modal-footer">
+                <div class="options font-weight-light">
+                    <p>Not a member? <a href="#">Sign Up</a></p>
+                    <p>Forgot <a href="#">Password?</a></p>
+                </div>
+
+            </div> -->
+
+      <!-- <div id="gMap">     
+            <div class="row"> -->
+
+                <!-- <p>Total Distance: <span id="total"></span></p> -->
+    
+                <!-- <p>Total speed: <span id="speed"></span></p> -->
             
-                <p>Total time: <span id="time"></span></p>
+                <!-- <p>Total time: <span id="time"></span></p> -->
 
-                <p>Total added time: <span id="addedTime"></span></p>
+                <!-- <p>Total added time: <span id="addedTime"></span></p> -->
                 
-                <p>Total real time: <span id="txt"></span></p>
+                <!-- <p>Total real time: <span id="clock"></span></p> -->
                 
-                <form action="http://127.0.0.1:3000" method="post">
-                    <strong>Start:</strong>
-                    <!-- <input id="start" type="text" class="form-control" id="validationTooltip02" placeholder="Point A" value="csula" name="pointA" required> -->
+                
                     
-                    <select id="start"  class="custom-select cs1">
-                    <option value="34.066563, -118.167908">Physical Education (PE)</option>
-                    <option value="34.066087, -118.168252">Career Center (CC)</option>
-                    <option value="34.066343, -118.167779">Athletics - Eagles Nest</option>
-                    <option value="34.065775, -118.168296">Student Health Center (HC)</option>
-                    <option value="34.066853, -118.168648">Financial Aid</option>
-                    <option value="34.066639, -118.168940">Administration (ADM)</option>
-                    <option value="34.065894, -118.167120">NASA Space Lab</option>
-                    <option value="34.067178, -118.167420">John F. Kennedy Memorial Library - Palmer Wing</option>
-                    <option value="34.066915, -118.169068">Student Affairs (SA)</option>
-                    <option value="34.066783, -118.169097">Admissions</option>
-                    <option value="34.065257, -118.168011">Annenberg Science Complex Wing B (ASCB)</option>
-                    <option value="34.065610, -118.169043">Biological Sciences (BS)</option>
-                    <option value="34.067698, -118.168601">Golden Eagle (GE)</option>
-                    <option value="34.067657, -118.167405">John F. Kennedy Memorial Library</option>
-                    <option value="34.067202, -118.166557">Fine Arts Gallery</option>
-                    <option value="34.064926, -118.168276">Annenberg Science Complex La Kretz (ASCL)</option>
-                    <option value="34.065469, -118.166423">Athletics - Reeder Field</option>
-                    <option value="34.066464, -118.166668">Engineering and Technology (ET)</option>
-                    <option value="34.067296, -118.166637">Fine Arts (FA)</option>
-                    <option value="34.068117, -118.169037">University Student Union (U-SU)</option>
-                    <option value="34.068190, -118.167210">Arena Theatre</option>
-                    <option value="34.068408, -118.168045">State Playhouse</option>
-                    <option value="34.065859, -118.170374">Physical Sciences (PS)</option>
-                    <option value="34.064222, -118.167212">Athletics - Jesse Owens Track and Field</option>
-                    <option value="34.062114, -118.173699">Alumni Center</option>
-                    <option value="34.068580, -118.168327">Luckman Gallery</option>
-                    <option value="34.065852, -118.165520">Hydrogen Station</option>
-                    <option value="34.068622, -118.167866">Music Hall</option>
-                    <option value="34.063634, -118.168805">Corporation Yard</option>
-                    <option value="34.068366, -118.167154">Music (MUS)</option>
-                    <option value="34.065186, -118.170311">Greenlee Plaza</option>
-                    <option value="34.064268, -118.169056">Simpson Tower (ST)</option>
-                    <option value="34.067514, -118.165506">King Hall (KH) and Lecture Halls</option>
-                    <option value="34.064008, -118.169215">Gerontology Center</option>
-                    <option value="34.064193, -118.166298">Athletics - Tennis/Basketball Courts</option>
-                    <option value="34.069215, -118.168097">Intimate Theatre</option>
-                    <option value="34.069300, -118.167103">Los Angeles County High School for the Arts (LACHSA)</option>
-                    <option value="34.069206, -118.168856">Luckman Theatre</option>
-                    <option value="34.063973, -118.169644">Salazar Hall (SH)</option>
-                    <option value="34.063627, -118.170736">Marc and Eva Stern Math and Science School</option>
-                    <option value="34.065077, -118.169337">Transit Center</option>
-                    <option value="34.069931, -118.165248">Housing Information</option>
-                    <option value="34.069472, -118.170479">TV, Film, Media (TVFM)</option>
-                    <option value="34.064868, -118.172830">Information - Welcome Center</option>
-                    <option value="34.064375, -118.172640">Parking, Transportation Service Center, Police/Public Safety (PUBS)</option>
-                    <option value="34.071736, -118.168926">Anna Bing Arnold Children's Center</option>
-                    <option value="34.062038, -118.173675">Hertzberg-Davis Forensic Science Center</option>
-                    </select>
-                    <br> 
-                    <!-- <input id="end" type="text" class="form-control" id="validationTooltip02" placeholder="Point B" value="" name="pointB" required> -->
-                   
-                    <strong>End:</strong>
-                    <select id="end"  class="custom-select cs2">
-                        <option value="34.066563, -118.167908">Physical Education (PE)</option>
-                        <option value="34.066087, -118.168252">Career Center (CC)</option>
-                        <option value="34.066343, -118.167779">Athletics - Eagles Nest</option>
-                        <option value="34.065775, -118.168296">Student Health Center (HC)</option>
-                        <option value="34.066853, -118.168648">Financial Aid</option>
-                        <option value="34.066639, -118.168940">Administration (ADM)</option>
-                        <option value="34.065894, -118.167120">NASA Space Lab</option>
-                        <option value="34.067178, -118.167420">John F. Kennedy Memorial Library - Palmer Wing</option>
-                        <option value="34.066915, -118.169068">Student Affairs (SA)</option>
-                        <option value="34.066783, -118.169097">Admissions</option>
-                        <option value="34.065257, -118.168011">Annenberg Science Complex Wing B (ASCB)</option>
-                        <option value="34.065610, -118.169043">Biological Sciences (BS)</option>
-                        <option value="34.067698, -118.168601">Golden Eagle (GE)</option>
-                        <option value="34.067657, -118.167405">John F. Kennedy Memorial Library</option>
-                        <option value="34.067202, -118.166557">Fine Arts Gallery</option>
-                        <option value="34.064926, -118.168276">Annenberg Science Complex La Kretz (ASCL)</option>
-                        <option value="34.065469, -118.166423">Athletics - Reeder Field</option>
-                        <option value="34.066464, -118.166668">Engineering and Technology (ET)</option>
-                        <option value="34.067296, -118.166637">Fine Arts (FA)</option>
-                        <option value="34.068117, -118.169037">University Student Union (U-SU)</option>
-                        <option value="34.068190, -118.167210">Arena Theatre</option>
-                        <option value="34.068408, -118.168045">State Playhouse</option>
-                        <option value="34.065859, -118.170374">Physical Sciences (PS)</option>
-                        <option value="34.064222, -118.167212">Athletics - Jesse Owens Track and Field</option>
-                        <option value="34.062114, -118.173699">Alumni Center</option>
-                        <option value="34.068580, -118.168327">Luckman Gallery</option>
-                        <option value="34.065852, -118.165520">Hydrogen Station</option>
-                        <option value="34.068622, -118.167866">Music Hall</option>
-                        <option value="34.063634, -118.168805">Corporation Yard</option>
-                        <option value="34.068366, -118.167154">Music (MUS)</option>
-                        <option value="34.065186, -118.170311">Greenlee Plaza</option>
-                        <option value="34.064268, -118.169056">Simpson Tower (ST)</option>
-                        <option value="34.067514, -118.165506">King Hall (KH) and Lecture Halls</option>
-                        <option value="34.064008, -118.169215">Gerontology Center</option>
-                        <option value="34.064193, -118.166298">Athletics - Tennis/Basketball Courts</option>
-                        <option value="34.069215, -118.168097">Intimate Theatre</option>
-                        <option value="34.069300, -118.167103">Los Angeles County High School for the Arts (LACHSA)</option>
-                        <option value="34.069206, -118.168856">Luckman Theatre</option>
-                        <option value="34.063973, -118.169644">Salazar Hall (SH)</option>
-                        <option value="34.063627, -118.170736">Marc and Eva Stern Math and Science School</option>
-                        <option value="34.065077, -118.169337">Transit Center</option>
-                        <option value="34.069931, -118.165248">Housing Information</option>
-                        <option value="34.069472, -118.170479">TV, Film, Media (TVFM)</option>
-                        <option value="34.064868, -118.172830">Information - Welcome Center</option>
-                        <option value="34.064375, -118.172640">Parking, Transportation Service Center, Police/Public Safety (PUBS)</option>
-                        <option value="34.071736, -118.168926">Anna Bing Arnold Children's Center</option>
-                        <option value="34.062038, -118.173675">Hertzberg-Davis Forensic Science Center</option>
-                    </select>
-
-                    <strong>Room #:</strong>
-                    <input id="room" type="text" class="form-control" id="validationTooltip02" placeholder="1234" value="" name="room" required>
-                   
-                    <strong>desired time of arrival:</strong>
-                    <input id="arrival" type="text" class="form-control" id="validationTooltip02" placeholder="5:00 pm/am" value="" name="arrival" required>
-                   
-
-                   
-                    
-                </form>
-            </div> 
-        <div class="column googleMap">
-          
-            <div id="map"></div>
-        </div>
-        <div id="right-panel"></div> 
-        </div>
-    </div>
+            <!-- </div>  -->
+        
         <script src="../scripts/myscripts.js"></script>
       
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNfBiDOrPORbsDXWQzBEHImd24G16SWPs&libraries=places&callback=initMap"></script>
-       
+       <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="scripts.min.js"></script>
+
+
     </body>
+   
 </html>

@@ -1,22 +1,34 @@
-body{
-    background-color: #FFCE00;
+body, html{
+    background: "../Images/Cal_State_21_980_735_80_s_c1_t_c_0_0_1.jpg";
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 #Icon{
     width: 50px;
 }
+#Icon2{
+    height:250px;
+    left:42%; /* play around with this */
+    position:absolute;
+    top:200px; /* and play around with this */
+    width:220px;
+}
 
 .custom{
     height: 40px;
-    color: #FFCE00;
+    color: rgb(209, 171, 20);
 }
 
 #map{
     height: 500px;
-    width: auto;
+    width: 105%;
+    margin-top: -550px;
 }
 #gMap{
-    margin-top: 10%;
+    margin-right: 5%;
+    margin-top: 200px;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -35,6 +47,7 @@ body{
 .column.googleMap {
     width: 75%;
     background-color: rgb(0, 0, 0);
+    margin-left: 40%;
 }
 
 .regForm{
@@ -42,4 +55,77 @@ body{
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
+}
+
+.algreen{
+    background-color: rgb(174, 233, 87);
+    font-weight: 900;
+    color: black;
+}
+
+.alyellow{
+    background-color: rgb(241, 238, 28);
+    font-weight: 900;
+    color: black;
+}
+
+.alred{
+    background-color: rgb(226, 14, 14);
+    font-weight: 900;
+    color: black;
+}
+
+#right-panel{
+    margin-left: 5%;
+}
+/* .carousel-inner{
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+
+    /* Center and scale the image nicely 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.d-block w-100{
+    height:100%;
+    margin-left:auto;
+    margin-right:auto;
+    position:relative; /* and this has to be relative */
+    width:731px;
+    width: auto;
+    height: 225px;
+    max-height: 225px;   
+}
+
+#loginButton{
+    margin-top: 200px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+#radButton{
+    margin-top: 18px;
+    margin-left: 20px;
+}
+.md-form{
+    margin-bottom: -10px;
+}
+
+.card-body {
+    margin-top: 10px;
+    padding: 1px;
+    margin-right: 1px;
+}
+
+#card{
+    background-color: white;
+    margin-top: 180px;
+    padding: 1px;
+    margin-right: 1px;
+}
+
+#card1{
+    margin-left: 600px;
 }
